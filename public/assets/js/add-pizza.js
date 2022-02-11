@@ -67,6 +67,8 @@ const handlePizzaSubmit = event => {
     })
     .catch(err => {
       console.log(err);
+      // this part only happens when the network fails, it is the call to indexedDB
+      saveRecord(formData);
     });
 };
 
